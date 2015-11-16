@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TouristVoucher" type="TouristVoucherType"/>
+  <xs:complexType name="HotelCharacteristicType">
+    <xs:sequence>
+      <xs:element name="Stars">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Inclusive">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="SuperAll"/>
+            <xs:enumeration value="All"/>
+            <xs:enumeration value="UltraAll"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:boolean" name="OneHumanRooms"/>
+      <xs:element type="xs:boolean" name="TwoHumanRooms"/>
+      <xs:element type="xs:boolean" name="ThreeHumanRooms"/>
+      <xs:element name="Food">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="BB"/>
+            <xs:enumeration value="HB"/>
+            <xs:enumeration value="Al"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:boolean" name="TV"/>
+      <xs:element type="xs:boolean" name="Wi-Fi"/>
+      <xs:element type="xs:boolean" name="Conditioner"/>
+      <xs:element type="xs:boolean" name="Refrigerator"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TouristVoucherType">
+    <xs:sequence>
+      <xs:element type="VoucherType" name="Voucher" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VoucherType">
+    <xs:sequence>
+      <xs:element name="Type">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Weekend"/>
+            <xs:enumeration value="Excursion"/>
+            <xs:enumeration value="Pilgrimage"/>
+            <xs:enumeration value="Rest"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="Country"/>
+      <xs:element name="NumberDays">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="180"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="NumberNights">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="180"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Transport">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Air"/>
+            <xs:enumeration value="Train"/>
+            <xs:enumeration value="Bus"/>
+            <xs:enumeration value="Car"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="HotelCharacteristicType" name="HotelCharacteristic"/>
+      <xs:element name="Cost">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="required"/>
+  </xs:complexType>
+</xs:schema>

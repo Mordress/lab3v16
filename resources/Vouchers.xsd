@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+    <element name="TouristVoucher">
+        <complexType>
+            <sequence>
+                <element name="Voucher" maxOccurs="unbounded">
+                    <complexType>
+                        <sequence>
+                            <element name="Type">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <enumeration value="Weekend"/>
+                                        <enumeration value="Excursion"/>
+                                        <enumeration value="Pilgrimage"/>
+                                        <enumeration value="Rest"/>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <element name="Country" type="string"/>
+                            <element name="NumberDays">
+                                <simpleType>
+                                    <restriction base="integer">
+                                        <minInclusive value="1"/>
+                                        <maxInclusive value="180"/>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <element name="NumberNights">
+                                <simpleType>
+                                    <restriction base="integer">
+                                        <minInclusive value="1"/>
+                                        <maxInclusive value="180"/>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <element name="Transport">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <enumeration value="Train"/>
+                                        <enumeration value="Air"/>
+                                        <enumeration value="Bus"/>
+                                        <enumeration value="Car"/>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <element name="HotelCharacteristic">
+                                <complexType>
+                                    <sequence>
+                                        <element name="Stars">
+                                            <simpleType>
+                                                <restriction base="integer">
+                                                    <minInclusive value="1"/>
+                                                    <maxInclusive value="5"/>
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                        <element name="Inclusive">
+                                            <simpleType>
+                                                <restriction base="string">
+                                                    <enumeration value="SuperAll"/>
+                                                    <enumeration value="All"/>
+                                                    <enumeration value="UltraAll"/>
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                        <element name="OneHumanRooms" type="boolean"/>
+                                        <element name="TwoHumanRooms" type="boolean"/>
+                                        <element name="ThreeHumanRooms" type="boolean"/>
+                                        <element name="Food">
+                                            <simpleType>
+                                                <restriction base="string">
+                                                    <enumeration value="BB"/>
+                                                    <enumeration value="Al"/>
+                                                    <enumeration value="HB"/>
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                        <element name="TV" type="boolean"/>
+                                        <element name="Wi-Fi" type="boolean"/>
+                                        <element name="Conditioner" type="boolean"/>
+                                        <element name="Refrigerator" type="boolean"/>
+                                    </sequence>
+                                </complexType>
+                            </element>
+                            <element name="Cost">
+                                <simpleType>
+                                    <restriction base="integer">
+                                        <minInclusive value="0"/>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                        </sequence>
+                    </complexType>
+                </element>
+            </sequence>
+            <attribute name="id" type="ID" use="required"/>
+        </complexType>
+    </element>
+</schema>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TouristVoucher>
+    <Voucher id="1">
+        <Type>Weekend</Type>
+        <Country>Germany</Country>
+        <NumberDays>2</NumberDays>
+        <NumberNights>3</NumberNights>
+        <Transport>Air</Transport>
+        <HotelCharacteristic>
+            <Stars>5</Stars>
+            <Inclusive>SuperAll</Inclusive>
+            <OneHumanRooms>true</OneHumanRooms>
+            <TwoHumanRooms>true</TwoHumanRooms>
+            <ThreeHumanRooms>false</ThreeHumanRooms>
+            <Food>BB</Food>
+            <TV>true</TV>
+            <Wi-Fi>true</Wi-Fi>
+            <Conditioner>true</Conditioner>
+            <Refrigerator>true</Refrigerator>
+        </HotelCharacteristic>
+        <Cost>300</Cost>
+    </Voucher>
+    <Voucher id="2">
+        <Type>Excursion</Type>
+        <Country>Poland</Country>
+        <NumberDays>5</NumberDays>
+        <NumberNights>6</NumberNights>
+        <Transport>Train</Transport>
+        <HotelCharacteristic>
+            <Stars>4</Stars>
+            <Inclusive>All</Inclusive>
+            <OneHumanRooms>true</OneHumanRooms>
+            <TwoHumanRooms>false</TwoHumanRooms>
+            <ThreeHumanRooms>false</ThreeHumanRooms>
+            <Food>HB</Food>
+            <TV>true</TV>
+            <Wi-Fi>false</Wi-Fi>
+            <Conditioner>true</Conditioner>
+            <Refrigerator>true</Refrigerator>
+        </HotelCharacteristic>
+        <Cost>500</Cost>
+    </Voucher>
+    <Voucher id="3">
+        <Type>Pilgrimage</Type>
+        <Country>Russia</Country>
+        <NumberDays>15</NumberDays>
+        <NumberNights>16</NumberNights>
+        <Transport>Bus</Transport>
+        <HotelCharacteristic>
+            <Stars>3</Stars>
+            <Inclusive>All</Inclusive>
+            <OneHumanRooms>true</OneHumanRooms>
+            <TwoHumanRooms>true</TwoHumanRooms>
+            <ThreeHumanRooms>true</ThreeHumanRooms>
+            <Food>Al</Food>
+            <TV>false</TV>
+            <Wi-Fi>false</Wi-Fi>
+            <Conditioner>false</Conditioner>
+            <Refrigerator>true</Refrigerator>
+        </HotelCharacteristic>
+        <Cost>670</Cost>
+    </Voucher>
+    <Voucher id="4">
+        <Type>Rest</Type>
+        <Country>United Kingdom</Country>
+        <NumberDays>9</NumberDays>
+        <NumberNights>10</NumberNights>
+        <Transport>Car</Transport>
+        <HotelCharacteristic>
+            <Stars>5</Stars>
+            <Inclusive>UltraAll</Inclusive>
+            <OneHumanRooms>true</OneHumanRooms>
+            <TwoHumanRooms>false</TwoHumanRooms>
+            <ThreeHumanRooms>true</ThreeHumanRooms>
+            <Food>BB</Food>
+            <TV>true</TV>
+            <Wi-Fi>true</Wi-Fi>
+            <Conditioner>true</Conditioner>
+            <Refrigerator>true</Refrigerator>
+        </HotelCharacteristic>
+        <Cost>1200</Cost>
+    </Voucher>
+</TouristVoucher>
