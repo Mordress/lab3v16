@@ -10,7 +10,7 @@ import javax.xml.validation.Validator;
 import java.io.File;
 import java.io.IOException;
 
-public class VaucherXmlValidator extends DefaultHandler {
+public class VoucherXmlValidator extends DefaultHandler {
 
     public static final String SCHEMA_FILE_NAME = "resources" + File.separator + "autoVouchers.xsd";
 
@@ -18,7 +18,7 @@ public class VaucherXmlValidator extends DefaultHandler {
 
     private String fileName;
 
-    public VaucherXmlValidator(String fileName) {
+    public VoucherXmlValidator(String fileName) {
         this.fileName = fileName;
     }
 

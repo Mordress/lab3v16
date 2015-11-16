@@ -1,6 +1,6 @@
 package com.gmail.mordress.lab3;
 
-import com.gmail.mordress.lab3.xml.VaucherXmlValidator;
+import com.gmail.mordress.lab3.xml.VoucherXmlValidator;
 
 import java.io.File;
 
@@ -24,7 +24,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception{
 	// write your code here
-        VaucherXmlValidator validator = new VaucherXmlValidator("resources" + File.separator + "Vouchers.xml");
+        VoucherXmlValidator validator = new VoucherXmlValidator("resources" + File.separator + "Vouchers.xml");
         System.out.println(validator.validate());
     }
 }
