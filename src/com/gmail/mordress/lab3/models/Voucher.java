@@ -6,13 +6,13 @@ public class Voucher {
 
     private String country;
 
-    private Type type;
+    private String type;
 
     private Integer numberOfDays;
 
     private Integer numberOfNights;
 
-    private Transport transport;
+    private String transport;
 
     private Integer cost;
 
@@ -32,11 +32,11 @@ public class Voucher {
         this.country = country;
     }
 
-    public Type getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(Type type) {
+    public void setType(String type) {
         this.type = type;
     }
 
@@ -56,11 +56,11 @@ public class Voucher {
         this.numberOfNights = numberOfNights;
     }
 
-    public Transport getTransport() {
+    public String getTransport() {
         return transport;
     }
 
-    public void setTransport(Transport transport) {
+    public void setTransport(String transport) {
         this.transport = transport;
     }
 
@@ -76,7 +76,7 @@ public class Voucher {
 
         private Integer stars;
 
-        private Inclusive inclusive;
+        private String inclusive;
 
         private Boolean oneHumanRooms;
 
@@ -84,7 +84,7 @@ public class Voucher {
 
         private Boolean threeHumanRooms;
 
-        private Food food;
+        private String food;
 
         private Boolean tv;
 
@@ -102,11 +102,11 @@ public class Voucher {
             this.stars = stars;
         }
 
-        public Inclusive getInclusive() {
+        public String getInclusive() {
             return inclusive;
         }
 
-        public void setInclusive(Inclusive inclusive) {
+        public void setInclusive(String inclusive) {
             this.inclusive = inclusive;
         }
 
@@ -134,11 +134,11 @@ public class Voucher {
             this.threeHumanRooms = threeHumanRooms;
         }
 
-        public Food getFood() {
+        public String getFood() {
             return food;
         }
 
-        public void setFood(Food food) {
+        public void setFood(String food) {
             this.food = food;
         }
 

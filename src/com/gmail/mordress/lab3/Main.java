@@ -28,12 +28,18 @@ public class Main {
     public static void main(String[] args) throws Exception{
 	// write your code here
         VoucherXmlValidator validator = new VoucherXmlValidator("resources" + File.separator + "Vouchers.xml");
+
+        System.out.print("Validate vouchers.xml: ");
         System.out.println(validator.validate());
+        System.out.println();
+
         if(validator.validate()) {
             VoucherXmlReader reader = new VoucherXmlReader();
             List<Voucher> vouchers = reader.read("resources" + File.separator + "Vouchers.xml");
             for(Voucher voucher : vouchers) {
+                //Voucher.Hotel hotel = voucher.Hotel;
                 System.out.println(voucher);
+                System.out.println();
                 System.out.println();
             }
         } else {
