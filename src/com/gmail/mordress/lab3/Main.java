@@ -3,7 +3,6 @@ package com.gmail.mordress.lab3;
 import com.gmail.mordress.lab3.models.Voucher;
 import com.gmail.mordress.lab3.xml.VoucherXmlReader;
 import com.gmail.mordress.lab3.xml.VoucherXmlValidator;
-
 import java.io.File;
 import java.util.List;
 
@@ -26,7 +25,6 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws Exception{
-	// write your code here
         VoucherXmlValidator validator = new VoucherXmlValidator("resources" + File.separator + "Vouchers.xml");
 
         System.out.print("Validate vouchers.xml: ");
@@ -37,14 +35,11 @@ public class Main {
             VoucherXmlReader reader = new VoucherXmlReader();
             List<Voucher> vouchers = reader.read("resources" + File.separator + "Vouchers.xml");
             for(Voucher voucher : vouchers) {
-                //Voucher.Hotel hotel = voucher.Hotel;
                 System.out.println(voucher);
-                System.out.println();
                 System.out.println();
             }
         } else {
             System.out.println(validator.getError());
         }
-
     }
 }

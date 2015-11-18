@@ -16,6 +16,26 @@ public class Voucher {
 
     private Integer cost;
 
+    private Integer stars;
+
+    private String inclusive;
+
+    private Boolean oneHumanRooms;
+
+    private Boolean twoHumanRooms;
+
+    private Boolean threeHumanRooms;
+
+    private String food;
+
+    private Boolean tv;
+
+    private Boolean wiFi;
+
+    private Boolean conditioner;
+
+    private Boolean refrigerator;
+
     public String getId() {
         return id;
     }
@@ -72,123 +92,84 @@ public class Voucher {
         this.cost = cost;
     }
 
-    public class Hotel {
+    public Integer getStars() {
+        return stars;
+    }
 
-        private Integer stars;
+    public void setStars(Integer stars) {
+        this.stars = stars;
+    }
 
-        private String inclusive;
+    public String getInclusive() {
+        return inclusive;
+    }
 
-        private Boolean oneHumanRooms;
+    public void setInclusive(String inclusive) {
+        this.inclusive = inclusive;
+    }
 
-        private Boolean twoHumanRooms;
+    public Boolean getOneHumanRooms() {
+        return oneHumanRooms;
+    }
 
-        private Boolean threeHumanRooms;
+    public void setOneHumanRooms(Boolean oneHumanRooms) {
+        this.oneHumanRooms = oneHumanRooms;
+    }
 
-        private String food;
+    public Boolean getTwoHumanRooms() {
+        return twoHumanRooms;
+    }
 
-        private Boolean tv;
+    public void setTwoHumanRooms(Boolean twoHumanRooms) {
+        this.twoHumanRooms = twoHumanRooms;
+    }
 
-        private Boolean wiFi;
+    public Boolean getThreeHumanRooms() {
+        return threeHumanRooms;
+    }
 
-        private Boolean conditioner;
+    public void setThreeHumanRooms(Boolean threeHumanRooms) {
+        this.threeHumanRooms = threeHumanRooms;
+    }
 
-        private Boolean refrigerator;
+    public String getFood() {
+        return food;
+    }
 
-        public Integer getStars() {
-            return stars;
-        }
+    public void setFood(String food) {
+        this.food = food;
+    }
 
-        public void setStars(Integer stars) {
-            this.stars = stars;
-        }
+    public Boolean getTv() {
+        return tv;
+    }
 
-        public String getInclusive() {
-            return inclusive;
-        }
+    public void setTv(Boolean tv) {
+        this.tv = tv;
+    }
 
-        public void setInclusive(String inclusive) {
-            this.inclusive = inclusive;
-        }
+    public Boolean getWiFi() {
+        return wiFi;
+    }
 
-        public Boolean getOneHumanRooms() {
-            return oneHumanRooms;
-        }
+    public void setWiFi(Boolean wiFi) {
+        this.wiFi = wiFi;
+    }
 
-        public void setOneHumanRooms(Boolean oneHumanRooms) {
-            this.oneHumanRooms = oneHumanRooms;
-        }
+    public Boolean getConditioner() {
+        return conditioner;
+    }
 
-        public Boolean getTwoHumanRooms() {
-            return twoHumanRooms;
-        }
+    public void setConditioner(Boolean conditioner) {
+        this.conditioner = conditioner;
+    }
 
-        public void setTwoHumanRooms(Boolean twoHumanRooms) {
-            this.twoHumanRooms = twoHumanRooms;
-        }
+    public Boolean getRefrigerator() {
+        return refrigerator;
+    }
 
-        public Boolean getThreeHumanRooms() {
-            return threeHumanRooms;
-        }
-
-        public void setThreeHumanRooms(Boolean threeHumanRooms) {
-            this.threeHumanRooms = threeHumanRooms;
-        }
-
-        public String getFood() {
-            return food;
-        }
-
-        public void setFood(String food) {
-            this.food = food;
-        }
-
-        public Boolean getTv() {
-            return tv;
-        }
-
-        public void setTv(Boolean tv) {
-            this.tv = tv;
-        }
-
-        public Boolean getWiFi() {
-            return wiFi;
-        }
-
-        public void setWiFi(Boolean wiFi) {
-            this.wiFi = wiFi;
-        }
-
-        public Boolean getConditioner() {
-            return conditioner;
-        }
-
-        public void setConditioner(Boolean conditioner) {
-            this.conditioner = conditioner;
-        }
-
-        public Boolean getRefrigerator() {
-            return refrigerator;
-        }
-
-        public void setRefrigerator(Boolean refrigerator) {
-            this.refrigerator = refrigerator;
-        }
-
-        @Override
-        public String toString() {
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.append("Количество звезд отеля: ").append(getStars() + "\n");
-            stringBuilder.append("Вид \"все включено\": ").append(getInclusive() + "\n");
-            stringBuilder.append("Наличие одноместных номеров: ").append(getOneHumanRooms() + "\n");
-            stringBuilder.append("Наличие двухместных номеров: ").append(getTwoHumanRooms() + "\n");
-            stringBuilder.append("Наличие трехместных номеров: ").append(getThreeHumanRooms() + "\n");
-            stringBuilder.append("Еда: ").append(getFood() + "\n");
-            stringBuilder.append("ТВ: ").append(getTv() + "\n");
-            stringBuilder.append("Wi-Fi: ").append(getWiFi() + "\n");
-            stringBuilder.append("Кондиционер: ").append(getConditioner() + "\n");
-            stringBuilder.append("Холодильник: ").append(getRefrigerator() + "\n");
-            return stringBuilder.toString();
-        }
+    public void setRefrigerator(Boolean refrigerator) {
+        this.refrigerator = refrigerator;
     }
 
     @Override
@@ -200,6 +181,16 @@ public class Voucher {
         stringBuilder.append("Количество дней: ").append(getNumberOfDays() + "\n");
         stringBuilder.append("Количество ночей: ").append(getNumberOfNights() + "\n");
         stringBuilder.append("Стоимость: ").append(getCost() + "\n");
+        stringBuilder.append("Количество звезд отеля: ").append(getStars() + "\n");
+        stringBuilder.append("Вид \"все включено\": ").append(getInclusive() + "\n");
+        stringBuilder.append("Наличие одноместных номеров: ").append(getOneHumanRooms() + "\n");
+        stringBuilder.append("Наличие двухместных номеров: ").append(getTwoHumanRooms() + "\n");
+        stringBuilder.append("Наличие трехместных номеров: ").append(getThreeHumanRooms() + "\n");
+        stringBuilder.append("Еда: ").append(getFood() + "\n");
+        stringBuilder.append("ТВ: ").append(getTv() + "\n");
+        stringBuilder.append("Wi-Fi: ").append(getWiFi() + "\n");
+        stringBuilder.append("Кондиционер: ").append(getConditioner() + "\n");
+        stringBuilder.append("Холодильник: ").append(getRefrigerator() + "\n");
         return  stringBuilder.toString();
     }
 }
