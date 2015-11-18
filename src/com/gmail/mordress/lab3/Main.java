@@ -24,7 +24,7 @@ import java.util.List;
 * */
 public class Main {
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         VoucherXmlValidator validator = new VoucherXmlValidator("resources" + File.separator + "Vouchers.xml");
 
         System.out.print("Validate vouchers.xml: ");
