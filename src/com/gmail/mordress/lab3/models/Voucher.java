@@ -176,18 +176,18 @@ public class Voucher {
 
         @Override
         public String toString() {
-            return "Hotel{" +
-                    "stars=" + stars +
-                    ", inclusive=" + inclusive +
-                    ", oneHumanRooms=" + oneHumanRooms +
-                    ", twoHumanRooms=" + twoHumanRooms +
-                    ", threeHumanRooms=" + threeHumanRooms +
-                    ", food=" + food +
-                    ", tv=" + tv +
-                    ", wiFi=" + wiFi +
-                    ", conditioner=" + conditioner +
-                    ", refrigerator=" + refrigerator +
-                    '}';
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.append("Количество звезд отеля: ").append(getStars() + "\n");
+            stringBuilder.append("Вид \"все включено\": ").append(getInclusive() + "\n");
+            stringBuilder.append("Наличие одноместных номеров: ").append(getOneHumanRooms() + "\n");
+            stringBuilder.append("Наличие двухместных номеров: ").append(getTwoHumanRooms() + "\n");
+            stringBuilder.append("Наличие трехместных номеров: ").append(getThreeHumanRooms() + "\n");
+            stringBuilder.append("Еда: ").append(getFood() + "\n");
+            stringBuilder.append("ТВ: ").append(getTv() + "\n");
+            stringBuilder.append("Wi-Fi: ").append(getWiFi() + "\n");
+            stringBuilder.append("Кондиционер: ").append(getConditioner() + "\n");
+            stringBuilder.append("Холодильник: ").append(getRefrigerator() + "\n");
+            return stringBuilder.toString();
         }
     }
 
@@ -199,16 +199,6 @@ public class Voucher {
         stringBuilder.append("Страна: ").append(getCountry() + "\n");
         stringBuilder.append("Количество дней: ").append(getNumberOfDays() + "\n");
         stringBuilder.append("Количество ночей: ").append(getNumberOfNights() + "\n");
-        /*stringBuilder.append("Количество звезд отеля: ").append(getHotel().getStars() + "\n");
-        stringBuilder.append("Вид \"все включено\": ").append(getHotel().getInclusive() + "\n");
-        stringBuilder.append("Наличие одноместных номеров: ").append(getHotel().getOneHumanRooms() + "\n");
-        stringBuilder.append("Наличие двухместных номеров: ").append(getHotel().getTwoHumanRooms() + "\n");
-        stringBuilder.append("Наличие трехместных номеров: ").append(getHotel().getThreeHumanRooms() + "\n");
-        stringBuilder.append("Еда: ").append(getHotel().getFood() + "\n");
-        stringBuilder.append("ТВ: ").append(getHotel().getTv() + "\n");
-        stringBuilder.append("Wi-Fi: ").append(getHotel().getWiFi() + "\n");
-        stringBuilder.append("Кондиционер: ").append(getHotel().getConditioner() + "\n");
-        stringBuilder.append("Холодильник: ").append(getHotel().getRefrigerator() + "\n");*/
         stringBuilder.append("Стоимость: ").append(getCost() + "\n");
         return  stringBuilder.toString();
     }

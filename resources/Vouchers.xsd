@@ -93,7 +93,7 @@
                     </complexType>
                 </element>
             </sequence>
-            <attribute name="id" type="ID" use="required"/>
+            <attribute name="id" type="string" use="required"/>
         </complexType>
     </element>
 </schema>

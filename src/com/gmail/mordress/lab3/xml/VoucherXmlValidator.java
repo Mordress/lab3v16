@@ -12,6 +12,7 @@ import java.io.IOException;
 
 public class VoucherXmlValidator extends DefaultHandler {
 
+    //public static final String SCHEMA_FILE_NAME = "resources" + File.separator + "Vouchers.xsd";
     public static final String SCHEMA_FILE_NAME = "resources" + File.separator + "autoVouchers.xsd";
 
     private StringBuilder error = new StringBuilder();

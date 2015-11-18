@@ -1,17 +1,17 @@
 package com.gmail.mordress.lab3.models;
 
 
-public class Transport implements IGetSet{
+public enum  Transport  {
 
-    private TransportPossible transportPossible;
+    BUS("Автобус"), AIR("Самолет"), TRAIN("Поезд"), CAR("Автомобиль");
 
-    @Override
-    public void setValue(String value) {
-        transportPossible = TransportPossible.valueOf(value);
+    private String name;
+
+    Transport(String name) {
+        this.name = name;
     }
 
-    @Override
-    public String getValue() {
-        return transportPossible.toString();
+    public String getName() {
+        return name;
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TouristVoucher>
-    <Voucher id="1">
+    <Voucher id="first">
         <Type>Weekend</Type>
         <Country>Germany</Country>
         <NumberDays>2</NumberDays>
@@ -20,7 +20,7 @@
         </HotelCharacteristic>
         <Cost>300</Cost>
     </Voucher>
-    <Voucher id="2">
+    <Voucher id="second">
         <Type>Excursion</Type>
         <Country>Poland</Country>
         <NumberDays>5</NumberDays>
@@ -40,7 +40,7 @@
         </HotelCharacteristic>
         <Cost>500</Cost>
     </Voucher>
-    <Voucher id="3">
+    <Voucher id="third">
         <Type>Pilgrimage</Type>
         <Country>Russia</Country>
         <NumberDays>15</NumberDays>
@@ -60,7 +60,7 @@
         </HotelCharacteristic>
         <Cost>670</Cost>
     </Voucher>
-    <Voucher id="4">
+    <Voucher id="fourth">
         <Type>Rest</Type>
         <Country>United Kingdom</Country>
         <NumberDays>9</NumberDays>
