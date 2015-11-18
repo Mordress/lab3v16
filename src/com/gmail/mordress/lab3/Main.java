@@ -1,9 +1,11 @@
 package com.gmail.mordress.lab3;
 
+import com.gmail.mordress.lab3.comparators.SortedByCost;
 import com.gmail.mordress.lab3.models.Voucher;
 import com.gmail.mordress.lab3.xml.VoucherXmlReader;
 import com.gmail.mordress.lab3.xml.VoucherXmlValidator;
 import java.io.File;
+import java.util.Arrays;
 import java.util.List;
 
 /*
@@ -29,15 +31,14 @@ public class Main {
 
         System.out.print("Validate vouchers.xml: ");
         System.out.println(validator.validate());
-        System.out.println();
 
         if(validator.validate()) {
             VoucherXmlReader reader = new VoucherXmlReader();
             List<Voucher> vouchers = reader.read("resources" + File.separator + "Vouchers.xml");
             for(Voucher voucher : vouchers) {
-                System.out.println(voucher);
-                System.out.println();
+                System.out.println("\n" + voucher);
             }
+            vouchers.sort(new SortedByCost());
         } else {
             System.out.println(validator.getError());
         }

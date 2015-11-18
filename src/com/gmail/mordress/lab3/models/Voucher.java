@@ -181,6 +181,7 @@ public class Voucher {
         stringBuilder.append("Количество дней: ").append(getNumberOfDays() + "\n");
         stringBuilder.append("Количество ночей: ").append(getNumberOfNights() + "\n");
         stringBuilder.append("Стоимость: ").append(getCost() + "\n");
+        stringBuilder.append("Транспорт: ").append(getTransport() + "\n");
         stringBuilder.append("Количество звезд отеля: ").append(getStars() + "\n");
         stringBuilder.append("Вид \"все включено\": ").append(getInclusive() + "\n");
         stringBuilder.append("Наличие одноместных номеров: ").append(getOneHumanRooms() + "\n");
