@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class VoucherXmlValidator extends DefaultHandler {
 
-    public static final String SCHEMA_FILE_NAME = "resources" + File.separator + "Vouchers.xsd";
+    public static final String SCHEMA_FILE = "resources" + File.separator + "Vouchers.xsd";
 
     private StringBuilder error = new StringBuilder();
 
@@ -62,7 +62,7 @@ public class VoucherXmlValidator extends DefaultHandler {
     public boolean validate() throws IOException {
         SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
         try {
-            Schema schema = factory.newSchema(new File(SCHEMA_FILE_NAME));
+            Schema schema = factory.newSchema(new File(SCHEMA_FILE));
             Validator validator = schema.newValidator();
             validator.setErrorHandler(this);
             validator.validate(new StreamSource(fileName));

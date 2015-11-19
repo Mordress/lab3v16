@@ -5,9 +5,7 @@ import com.gmail.mordress.lab3.models.Voucher;
 import com.gmail.mordress.lab3.xml.VoucherXmlReader;
 import com.gmail.mordress.lab3.xml.VoucherXmlValidator;
 import java.io.File;
-import java.util.Arrays;
 import java.util.List;
-
 /*
 1. Создать файл XML и соответствующую ему схему XSD.
 2. При разработке XSD использовать простые и комплексные типы, перечисления, шаблоны и предельные значения, обязательно использование атрибутов и типа ID.
